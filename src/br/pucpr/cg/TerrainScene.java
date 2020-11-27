@@ -35,8 +35,8 @@ public class TerrainScene implements Scene
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
         shader = Shader.loadProgram("phong");
-        mesh = MeshFactory.createTerrain(shader, 1000, 1000, 1, 8f).setWireframe(true);
-        //mesh = MeshFactory.createTerrain(true, shader, 1000, 1000, 0.1f, 10f).setWireframe(false);
+        //mesh = MeshFactory.createTerrain(shader, 1000, 1000, 1, 8f).setWireframe(true);
+        mesh = MeshFactory.createTerrain(true, shader, 1000, 1000, 0.1f, 10f).setWireframe(false);
 
         camera.getPosition().set(0f, 50f, 0f);
         camera.setAngleY(toRadians(0));

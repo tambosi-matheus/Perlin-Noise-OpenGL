@@ -7,8 +7,8 @@ public final class TambosiNoise
 
     static
     {
-        var width = Integer.MAX_VALUE;
-        var height = Integer.MIN_VALUE;
+        var width = 2000;
+        var height = 2000;
         map = new float[width][height];
 
         var value = Utils.Random(0, 1);
@@ -57,9 +57,7 @@ public final class TambosiNoise
 
                 for(int i = 0; i < scale; i++)
                 {
-                    System.out.println("value before interpolation " + actualValue);
                     actualValue = Utils.Lerp(actualValue, desiredValue, 1/scale);
-                    System.out.println("value after interpolation " + actualValue);
                     actualValue = Float.max(0, value);
                     actualValue = Float.min(1, value);
 
